@@ -1,6 +1,11 @@
 #ifndef SALA_H
 #define SALA_H
 
+#include<iostream>
+#include <string>
+#include<iomanip>
+
+using namespace std;
 
 class Sala
 {
@@ -11,11 +16,13 @@ private:
     bool asientos[5][5];
     char filas[5]={'A', 'B', 'C', 'D', 'E'};
     int columnas[5];
-    char salas[5][5];
+    char asientos_str[5][5];
+    char asientostr();
 public:
     Sala();
-    Sala(int);
-    void sala(int id);
+    void crear_sala();
+    void mostrar_sala();
+    bool reservar_asientos(char, int);
     ~Sala();
 };
 
