@@ -7,12 +7,14 @@ class Cine
 private:
     float const PRECIO_BOLETO=3.15;
     Pelicula peliculas[5];
-    Sala salas;
+    Sala *salas[5];
     int indice;
+    float total;
 public:
     Cine();
     void mostrarCartelera();
     void mostrarSala();
+    void comprarBoletos();
     ~Cine();
 };
 
