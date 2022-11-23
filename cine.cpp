@@ -39,6 +39,21 @@ void Cine::mostrarSala()
     salas[id-1]->mostrar_sala();
 }
 
+bool Cine::validar_asiento_fila(char fila)
+{
+    char mayusfil;
+    bool val;
+    mayusfil=toupper(fila);
+
+        if(mayusfil< 'A' || mayusfil > 'E'){
+            val=false;
+        }
+        else{
+          val=true;
+        }
+        return val;
+};
+
 Cine::~Cine()
 {
 

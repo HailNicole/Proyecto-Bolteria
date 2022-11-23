@@ -15,6 +15,7 @@ public:
     void mostrarCartelera();
     void mostrarSala();
     void comprarBoletos();
+    bool validar_asiento_fila(char fila);
     ~Cine();
 };
 
