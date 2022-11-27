@@ -18,6 +18,11 @@ public:
     Pelicula(int, string, string, float, bool);
     string mostrar();
     ~Pelicula();
+    const string &getTitulo() const;
+    float getDuracion() const;
+    bool getEstreno() const;
+    const string &getHora() const;
+    int getId() const;
 };
 
 #endif // PELICULA_H
