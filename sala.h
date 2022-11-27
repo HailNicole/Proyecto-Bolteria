@@ -23,6 +23,7 @@ public:
     void crear_sala();
     void mostrar_sala();
     bool reservar_asientos(char, int);
+    int contador_de_asientos();
     ~Sala();
 };
 

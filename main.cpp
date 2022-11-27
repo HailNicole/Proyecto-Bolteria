@@ -3,23 +3,37 @@
 #include <string.h>
 #include <ctype.h>
 #include "cine.h"
-#include "sala.h"
 using namespace std;
-
 
 int main(){
 
-    cout << "\n- - M I  C I N E - - " << endl;
+    printf(" \
+    **************************************************************************************************************************************************** \n \
+    * ************************************************************************************************************************************************ * \n \
+    *    ############  #############  ####         ##  #############           ##############    ##              ##          ##    ############        * \n \
+    *    ##                 ##        ##  ##       ##  ##                      ##           ##   ##              ##          ##   ##          ##       * \n \
+    *    ##                 ##        ##   ##      ##  ##                      ##            ##  ##              ##          ##   ##                   * \n \
+    *    ##                 ##        ##    ##     ##  ##                      ##           ##   ##              ##          ##   ##                   * \n \
+    *    ##                 ##        ##     ##    ##  ############  #######   ##############    ##              ##          ##     ###########        * \n \
+    *    ##                 ##        ##      ##   ##  ############  #######   ##                ##              ##          ##               ##       * \n \
+    *    ##                 ##        ##       ##  ##  ##                      ##                ##              ##          ##               ##       * \n \
+    *    ##                 ##        ##        ## ##  ##                      ##                ##              ##          ##               ##       * \n \
+    *    ##                 ##        ##         ####  ##                      ##                ##              ##          ##   ##          ##       * \n \
+    *    ############  #############  ##          ###  #############           ##                #############   ##############    ############        * \n \
+    * ************************************************************************************************************************************************ * \n \
+    **************************************************************************************************************************************************** \n");
+
+
     Cine c1;
     int opcion(0);
 
     do{
 
-        cout << "\n+ + MENÚ PRINCIPAL + +" << endl;
-        cout << "1. Mostrar cartelera" << endl;
-        cout << "2. Mostrar sala" << endl;
-        cout << "3. Comprar boletos" << endl;
-        cout << "4. Salir" << endl;
+        cout << "\n\t + + MENÚ PRINCIPAL + +" << endl;
+        cout << "\t1. Mostrar cartelera" << endl;
+        cout << "\t2. Mostrar sala" << endl;
+        cout << "\t3. Comprar boletos" << endl;
+        cout << "\t4. Salir\n" << endl;
 
         cout << "Ingrese su opcion: ";
         cin >> opcion;
@@ -28,10 +42,9 @@ int main(){
             cin.clear();
             cin.ignore(1000,'\n');
             cout << "\nIngresa un número!" << endl;
-            system("pause");
             continue;
          }
-
+        system("clear");
         switch(opcion){
            case 1:
                 c1.mostrarCartelera();
@@ -42,17 +55,17 @@ int main(){
                break;
 
            case 3:
-
+                c1.comprarBoletos();
                break;
 
            case 4:
-               cout << "\nAdios!" << endl;
+               cout << "\nGRACIAS POR SU VISITA!" << endl;
                break;
 
            default:
                cout << "\nOpción inválida!" << endl;
         }
-    }while(opcion != '4');
+    }while(opcion != 4);
 
     return 0;
 }
